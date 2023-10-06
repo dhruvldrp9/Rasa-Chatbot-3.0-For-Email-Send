@@ -1,0 +1,66 @@
+version: "2.0"
+
+stories:
+
+# - story: Activate Form
+#   steps:
+#     - intent: send_email
+#     - action: email_form
+#     - active_loop: email_form
+
+# - story: Submit Form
+#   steps:
+#     - intent: send_email  # User triggers the form
+#     - action: email_form   # Bot activates the form
+#     - active_loop: email_form  # Form is active
+#     - intent: inform  # User provides required information
+#     - slot_was_set:
+#         - requested_slot: email_subject
+#     - intent: inform
+#     - slot_was_set:
+#         - requested_slot: email_content
+#     - action: action_submit  # User submits the form
+#     - active_loop: null  # Deactivate the form
+#     - slot_was_set:
+#         - requested_slot: null
+
+
+- story: Email Path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: send_email
+  - action: action_submit
+#   # - action: email_form
+#   # - active_loop: email_form
+#   # - slot_was_set:
+#   #   - requested_slot: email
+#   # - active_loop: null
+  # - action: action_submit
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

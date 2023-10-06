@@ -1,0 +1,60 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+# - rule: Activate Form
+#   steps:
+#     - intent: send_email
+#     - action: email_form
+#     - active_loop: email_form
+
+# - rule: Submit Form
+#   condition:
+#     # Condition that form is active.
+#     - active_loop: email_form
+#   steps:
+#     - intent: send_email  # User triggers the form
+#     - action: email_form   # Bot activates the form
+#     - active_loop: email_form  # Form is active
+#     - intent: inform  # User provides required information
+#     - slot_was_set:
+#         - requested_slot: email
+#     - intent: inform
+#     - slot_was_set:
+#         - requested_slot: subject
+#     - intent: inform
+#     - slot_was_set:
+#         - requested_slot: message
+#     - action: action_submit  # User submits the form
+#     - active_loop: null  # Deactivate the form
+#     - slot_was_set:
+#         - requested_slot: null
+
+# - rule: Activate Form
+#   steps:
+#     - intent: send_email
+#     - action: email_form
+#     - active_loop: email_form
+
+# - rule: Submit form
+#   condition:
+#   # Condition that form is active.
+#   - active_loop: email_form
+#   steps:
+#   # Form is deactivated
+#   - action: email_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   # The actions we want to run when the form is submitted.
+#   - action: action_submit
