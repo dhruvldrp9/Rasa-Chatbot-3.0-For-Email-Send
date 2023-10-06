@@ -27,7 +27,7 @@ class ActionSubmit(Action):
         domain: "DomainDict",
     ) -> List[Dict[Text, Any]]:
         
-        email = "akshitpatel1732@gmail.com"
+        email = "RECIPIENT_EMAIL"
         SendEmail(email,"Rasa Chatbot","This is a test mail from Rasa Chatbot.")
         # tracker.get_slot("subject"),
             # tracker.get_slot("message")
@@ -38,8 +38,8 @@ def SendEmail(receiver_email,subject,message):
 
     smtp_server = "smtp.gmail.com"
     port = 587  # For starttls
-    sender_email = "patel.dhruv13656513@gmail.com"
-    password = "mlnqhedtnqncbnrs"
+    sender_email = "SENDER_EMAIL"
+    password = "YOUR_PASSWORD_HERE"
 
     # Create a secure SSL context
     context = ssl.create_default_context()
@@ -107,11 +107,11 @@ def SendEmail(receiver_email,subject,message):
     # try:
     #     context = ssl.create_default_context()
     #     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-    #         server.login(fromaddr, "Vinod@123")
+    #         server.login(fromaddr, "PASSWORD")
     #         server.sendmail(
     #             fromaddr, toaddr, msg.as_string()
     # )
-    #     # s.login(fromaddr, "Vinod@123")
+    #     # s.login(fromaddr, "PASSWORD")
 
     #     # # Converts the Multipart msg into a string
     #     # text = msg.as_string()
