@@ -29,3 +29,12 @@ rasa run actions
 ```
 rasa shell
 ```
+![Out](https://github.com/dhruvldrp9/Rasa-Chatbot-3.0-For-Email-Send/assets/110040583/57192ac2-0901-43c7-a97f-c5ced1d8e918)
+
+
+
+![email1](https://github.com/dhruvldrp9/Rasa-Chatbot-3.0-For-Email-Send/assets/110040583/e98db642-91c1-4e98-a31d-0ff0d2710d98)
+
+
+
+![email](https://github.com/dhruvldrp9/Rasa-Chatbot-3.0-For-Email-Send/assets/110040583/69db4d09-e214-4a14-ab29-08bc46e1bed4)
