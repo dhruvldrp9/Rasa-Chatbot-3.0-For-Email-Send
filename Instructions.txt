@@ -1,0 +1,17 @@
+To install and run this application, follow the steps below carefully.
+
+Step 1: Follow the initial setup instructions from the README.md file
+
+Step 2: When replacing, download the project from the below link.
+	https://github.com/dhruvldrp9/Rasa-Chatbot-3.0-For-Email-Send/
+
+Step 3: Upon successful replacement of all the project files, change the following
+	1. File: actions/actions.py
+	   Values: email, sender_email, password
+
+Step 4: Follow instructions from the README.md file by opening a command prompt in your project folder.
+	For Training: rasa train
+	For Testing:
+		Open two terminals, then run in
+			1st terminal: rasa run actions
+			2nd terminal: rasa shell
